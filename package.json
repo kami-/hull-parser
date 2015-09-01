@@ -1,0 +1,21 @@
+{
+  "name": "hull-parser",
+  "version": "0.1.0",
+  "description": "Hull factions parser.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Laszlo Major",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^1.5.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3"
+  }
+}
