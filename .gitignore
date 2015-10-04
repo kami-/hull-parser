@@ -1,3 +1,5 @@
 *.js
+!run.js
 /node_modules
 /src/elm/elm-stuff
+/src/elm/test/elm-stuff
