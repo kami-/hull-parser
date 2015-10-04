@@ -52,7 +52,7 @@ stringToGame : String -> Game
 stringToGame gameStr =
    if | gameStr == "arma2" -> Arma2
       | gameStr == "arma2-i44" -> Arma2I44
-      | gameStr == "arma3" -> Arma3
+      | otherwise -> Arma3
 
 -- UPDATE
 
