@@ -81,7 +81,7 @@ update action model =
       )
 
     FactionCheck name checked ->
-      ( { model | factions <- updateFaction model.factions name checked }
+      ( { model | factions <- checkFaction model.factions name checked }
       , Effects.none
       )
 
@@ -101,8 +101,8 @@ update action model =
       , Effects.none
       )
 
-updateFaction : List Faction -> String -> Bool -> List Faction
-updateFaction factions name checked =
+checkFaction : List Faction -> String -> Bool -> List Faction
+checkFaction factions name checked =
   let tryReplaceFaction faction =
     if faction.name == name
       then { faction | checked <- checked }
