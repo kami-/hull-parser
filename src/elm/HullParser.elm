@@ -2,7 +2,7 @@ module HullParser where
 
 import Basics exposing (toString)
 import Debug exposing(log)
-import Effects exposing (Effects, Never)
+import Effects exposing (Effects)
 import Json.Decode
 import Json.Encode
 import Html exposing (..)
@@ -10,28 +10,7 @@ import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Http
 import Signal exposing (Address)
-import StartApp
 import Task exposing (..)
-
-app =
-  StartApp.start
-    { init = init 
-    , view = view
-    , update = update
-    , inputs = []
-    }
-
-main =
-  app.html
-
-port tasks : Signal (Task.Task Never ())
-port tasks =
-  app.tasks
-
-port mission : Signal String
-port mission =
-  Signal.map .mission app.model
-  |> Signal.dropRepeats
 
 -- MODEL
 
